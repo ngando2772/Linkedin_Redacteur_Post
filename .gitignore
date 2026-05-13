@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environnement virtuel
+.venv/
+venv/
+ENV/
+
+# Sécurité (Clés API)
+.env
+
+# Logs
+*.log
+
+# CrewAI & Données
+outputs/
+*.sqlite
+.crewai/
+
+# OS / IDE
+.vscode/
+.DS_Store
