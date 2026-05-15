@@ -1,56 +1,45 @@
-# {{crew_name}} Crew
+# 🚀 LinkedIn Content & Video Factory (Multi-Agent RAG System)
 
-Welcome to the {{crew_name}} Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Bienvenue dans le moteur de croissance de contenu de nouvelle génération. Ce projet utilise la puissance de **CrewAI**, de l'**IA Agentique** et du **RAG** pour transformer une simple idée ou un document technique en une stratégie multicanale complète (Post LinkedIn + Script Vidéo optimisé).
 
-## Installation
+---
 
-Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+## 🎯 Vision du Projet
+L'objectif est d'automatiser le flux de travail d'une agence de marketing digital. Le système ne se contente pas de générer du texte ; il recherche, rédige, optimise pour les algorithmes et prépare la déclinaison vidéo pour garantir une portée maximale.
 
-First, if you haven't already, install uv:
+---
 
-```bash
-pip install uv
-```
+## 🧠 Architecture du Système (The Crew)
 
-Next, navigate to your project directory and install the dependencies:
+Le projet repose sur une équipe d'agents spécialisés :
 
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
-crewai install
-```
+1.  **Analyste Technologique (Researcher) :** Explore le sujet en profondeur, extrait les données clés et assure la crédibilité technique.
+2.  **Copywriter Stratégique (Writer) :** Transforme les données brutes en un récit captivant (storytelling) adapté à l'audience LinkedIn.
+3.  **Spécialiste SEO & Algorithmes (SEO Agent) :** Optimise la visibilité, sélectionne les hashtags et structure le format pour le "scroll-stopping".
+4.  **Réalisateur Vidéo (Video Agent) :** Convertit le post final en un script dynamique pour Shorts/Reels (Visuels + Voix Off).
 
-### Customizing
+---
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
+## 🛠 Stack Technique
 
-- Modify `src/postlinkedin/config/agents.yaml` to define your agents
-- Modify `src/postlinkedin/config/tasks.yaml` to define your tasks
-- Modify `src/postlinkedin/crew.py` to add your own logic, tools and specific args
-- Modify `src/postlinkedin/main.py` to add custom inputs for your agents and tasks
+*   **Framework :** [CrewAI](https://www.crewai.com/) (Orchestration multi-agents)
+*   **Gestionnaire de Paquets :** `uv` (Ultra-fast Python package installer)
+*   **Modèles LLM :** Support de modèles locaux via **Ollama** (Llama 3, Mistral) ou via API (Groq, OpenAI).
+*   **Environnement :** Python 3.13 / Ubuntu Linux.
+*   **Outils RAG :** Intégration prévue pour le traitement de fichiers PDF, Word et bases de données SQL.
 
-## Running the Project
+---
 
-To kickstart your flow and begin execution, run this from the root folder of your project:
+## 📂 Structure du Projet
 
-```bash
-crewai run
-```
+```text
+postlinkedin/
+├── src/
+│   └── postlinkedin/
+│       ├── config/              # Fichiers YAML (Agents & Tasks)
+│       ├── crews/               # Définition des différentes équipes
+│       ├── main.py              # Point d'entrée (Flows & Logic)
+│       └── tools/               # Outils personnalisés (RAG, API)
+├── .env                         # Variables d'environnement (Clés API)
+└── pyproject.toml               # Configuration du projet via uv
 
-This command initializes the PostLinkedin Flow as defined in your configuration.
-
-This example, unmodified, will run a content creation flow on AI Agents and save the output to `output/post.md`.
-
-## Understanding Your Crew
-
-The PostLinkedin Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
-
-## Support
-
-For support, questions, or feedback regarding the {{crew_name}} Crew or crewAI.
-
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
-
-Let's create wonders together with the power and simplicity of crewAI.
