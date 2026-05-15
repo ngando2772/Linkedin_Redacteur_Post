@@ -17,7 +17,8 @@ class Redacteurpost():
             config=self.agents_config['redacteur'],
             verbose=True,
             reasoning=True,
-            max_reasoning_attempts=3
+            max_reasoning_attempts=3,
+            llm='groq/llama-3.3-70b-versatile',
         )
     
     @task

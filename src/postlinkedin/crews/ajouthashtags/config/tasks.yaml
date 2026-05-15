@@ -1,17 +1,44 @@
-research_task:
+seo_agent_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is {current_year}.
-  expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
-  agent: researcher
+    Analyser la publication LinkedIn rédigée
+    par le Writer Agent afin d’optimiser
+    sa visibilité et son engagement.
 
-reporting_task:
-  description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    La tâche consiste à :
+    - identifier les mots-clés principaux,
+    - améliorer la structure SEO du contenu,
+    - proposer des hashtags pertinents,
+    - optimiser les expressions importantes,
+    - vérifier la lisibilité du post,
+    - renforcer le potentiel de viralité,
+    - adapter le contenu à l’algorithme LinkedIn.
+
+    Les hashtags doivent être :
+    - pertinents,
+    - modernes,
+    - populaires,
+    - cohérents avec le sujet,
+    - adaptés à l’audience cible.
+
+    L’optimisation doit rester naturelle
+    et professionnelle sans surcharger le contenu.
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
+    Un rapport SEO LinkedIn contenant :
+
+    1. Les mots-clés principaux détectés
+    2. Les améliorations SEO proposées
+    3. Une version optimisée du post
+    4. Une liste de hashtags pertinents
+    5. Les hashtags les plus stratégiques
+    6. Le score estimé de visibilité
+    7. Des recommandations d’engagement
+    8. Des suggestions pour améliorer la portée organique
+
+    Le résultat doit être :
+    - professionnel,
+    - optimisé pour LinkedIn,
+    - clair,
+    - moderne,
+    - prêt pour publication.
+  agent: seo_agent
+
