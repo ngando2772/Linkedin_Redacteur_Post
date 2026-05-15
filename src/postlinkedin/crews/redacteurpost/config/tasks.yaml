@@ -1,47 +1,17 @@
 redacteur_task:
   description: >
-    Utiliser les informations collectées par l’agent de recherche
-    pour rédiger une publication LinkedIn professionnelle,
-    engageante et facile à lire.
+    Utilise ces informations :
 
-    La publication doit :
-    - commencer par un hook fort,
-    - capter l’attention rapidement,
-    - expliquer clairement les idées principales,
-    - apporter de la valeur au lecteur,
-    - utiliser un ton humain et professionnel,
-    - être bien structurée avec des paragraphes courts,
-    - inclure éventuellement un storytelling,
-    - se terminer par un call-to-action engageant.
+    {research_result}
 
-    Adapter le style selon le sujet :
-    - technologie,
-    - business,
-    - IA,
-    - motivation,
-    - développement personnel,
-    - productivité,
-    - entrepreneuriat.
-
-    Utiliser les informations fournies sans inventer
-    de données non vérifiées.
+    Rédige un post LinkedIn clair, professionnel et engageant.
   expected_output: >
-    Une publication LinkedIn complète contenant :
+    Un post LinkedIn complet contenant :
+    - un hook d’ouverture
+    - un développement simple et structuré
+    - une conclusion
+    - un call-to-action
+    - 3 à 5 hashtags pertinents
 
-    1. Un hook puissant dès la première ligne
-    2. Une introduction engageante
-    3. Un développement structuré
-    4. Des informations claires et utiles
-    5. Un ton professionnel et naturel
-    6. Une conclusion marquante
-    7. Un call-to-action
-    8. Des hashtags pertinents
-
-    Le résultat doit être :
-    - prêt à être publié sur LinkedIn,
-    - fluide,
-    - moderne,
-    - engageant,
-    - optimisé pour maximiser les interactions.
+    Le post doit être prêt à publier, fluide et naturel.
   agent: redacteur
-

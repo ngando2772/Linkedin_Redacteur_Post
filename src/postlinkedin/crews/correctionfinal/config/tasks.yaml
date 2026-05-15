@@ -1,49 +1,20 @@
 correcteurFinal_task:
   description: >
-    Analyser et corriger la version finale
-    de la publication LinkedIn optimisée
-    par le SEO Agent.
+    Améliore et corrige le post suivant :
 
-    La tâche consiste à :
+    {seo_result}
 
-    - corriger les fautes grammaticales,
-    - améliorer la fluidité des phrases,
-    - supprimer les répétitions,
-    - améliorer la lisibilité,
-    - renforcer l’impact du hook,
-    - vérifier la cohérence du contenu,
-    - améliorer le storytelling si nécessaire,
-    - vérifier la structure du post,
-    - conserver un ton humain et naturel,
-    - s’assurer que les hashtags sont bien intégrés,
-    - garantir une qualité professionnelle finale.
-
-    La correction doit rester naturelle
-    et ne pas déformer le message original.
-
-    L’objectif est de livrer une publication
-    LinkedIn parfaitement prête pour publication.
+    Vérifie :
+    - orthographe
+    - fluidité
+    - clarté
+    - structure
+    - call-to-action
   expected_output: >
-    Une version finale optimisée de la publication
-    LinkedIn contenant :
-
-    1. Un hook fort et fluide
-    2. Un texte grammaticalement correct
-    3. Une structure claire et agréable à lire
-    4. Des paragraphes bien organisés
-    5. Une excellente fluidité rédactionnelle
-    6. Une cohérence globale du contenu
-    7. Une conclusion engageante
-    8. Un call-to-action pertinent
-    9. Des hashtags bien optimisés
-    10. Une version finale prête à publier
-
-    Le résultat doit être :
-    - professionnel,
-    - humain,
-    - engageant,
-    - moderne,
-    - sans fautes,
-    - optimisé pour LinkedIn.
+    Un post LinkedIn final :
+    - corrigé
+    - fluide
+    - bien structuré
+    - prêt à publier
+    - avec hashtags optimisés
   agent: correcteurFinal
-

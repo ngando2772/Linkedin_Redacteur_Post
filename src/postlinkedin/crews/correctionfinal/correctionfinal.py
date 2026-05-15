@@ -3,6 +3,14 @@ from crewai.project import CrewBase, agent, crew, task
 from crewai.agents.agent_builder.base_agent import BaseAgent
 from postlinkedin.tools.correctionFinal import FinalContentOptimizerTool
 
+from crewai import LLM
+
+# Configuration pour Llama 3 local via Ollama
+local_llm = LLM(
+    model="ollama/mistral",
+    base_url="http://localhost:11434"
+)
+
 @CrewBase
 class Correctionfinal():
     """Correctionfinal crew"""
@@ -15,9 +23,8 @@ class Correctionfinal():
     def correcteurFinal(self) -> Agent:
         return Agent(
             config=self.agents_config['correcteurFinal'], # type: ignore[index]
-            verbose=True,
             tools=[FinalContentOptimizerTool()],
-            llm='groq/llama-3.3-70b-versatile',
+            llm=local_llm,
         )
 
  

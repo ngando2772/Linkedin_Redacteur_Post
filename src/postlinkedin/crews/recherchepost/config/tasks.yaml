@@ -1,36 +1,17 @@
 research_task_post:
   description: >
-    Effectuer une recherche approfondie sur {topic}
-    afin de collecter des informations utiles pour la rédaction
-    d’un post LinkedIn professionnel.
+    Analyse le sujet suivant pour créer un post LinkedIn performant :
 
-    La recherche doit inclure :
-    - les tendances actuelles,
-    - les statistiques importantes,
-    - les points clés à aborder,
-    - les problèmes fréquents,
-    - les solutions modernes,
-    - des exemples concrets,
-    - des idées accrocheuses pour maximiser l’engagement.
+    {topic}
 
-    Organiser les résultats d’une manière claire et exploitable
-    pour un créateur de contenu LinkedIn.
+    Fournis les éléments essentiels :
+    - tendances principales
+    - informations clés
+    - idées de contenu LinkedIn
   expected_output: >
-    Un rapport structuré contenant :
-
     1. Résumé du sujet
-    2. Tendances actuelles
-    3. Statistiques ou données importantes
-    4. Points clés à développer
-    5. Problèmes fréquents liés au sujet
-    6. Solutions ou innovations modernes
-    7. Idées de hooks LinkedIn
-    8. Ton recommandé pour la publication
-    9. Audience cible
-    10. Suggestions d’angles de contenu viraux
-
-    Le résultat doit être clair, professionnel
-    et directement exploitable pour rédiger
-    un post LinkedIn performant.
+    2. Tendances principales
+    3. Points clés exploitables
+    4. Idées de posts LinkedIn (hooks + angles)
+    5. Audience cible
   agent: researcherPost
-

@@ -1,8 +1,14 @@
-from crewai import Agent, Crew, Process, Task
+from crewai import Agent, Crew, Process, Task,LLM
 from crewai.project import CrewBase, agent, crew, task
 from crewai.agents.agent_builder.base_agent import BaseAgent
 from postlinkedin.tools.ajoutHastags import KeywordResearchTool, HashtagGeneratorTool
+from crewai import LLM
 
+# Configuration pour Llama 3 local via Ollama
+local_llm = LLM(
+    model="ollama/mistral",
+    base_url="http://localhost:11434"
+)
 
 @CrewBase
 class Ajouthashtags():
@@ -16,9 +22,8 @@ class Ajouthashtags():
     def seo_agent(self) -> Agent:
         return Agent(
             config=self.agents_config['seo_agent'], # type: ignore[index]
-            verbose=True,
             tools=[KeywordResearchTool(), HashtagGeneratorTool()],
-            llm='groq/llama-3.3-70b-versatile',
+            llm=local_llm,
         )
 
     @task

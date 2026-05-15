@@ -1,7 +1,7 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from crewai.agents.agent_builder.base_agent import BaseAgent
-from crewai_tools import SerperDevTool,ScrapeWebsiteTool,BrowserbaseLoadTool
+from crewai_tools import SerperDevTool,BraveSearchTool
 from langchain_groq import ChatGroq
 import os
 
@@ -10,6 +10,14 @@ llm_groq = ChatGroq(
     temperature=0, 
     groq_api_key=os.environ.get("GROQ_API_KEY"), 
     model_name='groq/llama-3.3-70b-versatile'
+)
+
+from crewai import LLM
+
+# Configuration pour Llama 3 local via Ollama
+local_llm = LLM(
+    model="ollama/mistral",
+    base_url="http://localhost:11434"
 )
 
 
@@ -26,10 +34,8 @@ class Recherchepost():
     def researcherPost(self) -> Agent:
         return Agent(
             config=self.agents_config['researcherPost'], # type: ignore[index]
-            verbose=True,
-            allow_delegation=False,
-            tools=[SerperDevTool(),ScrapeWebsiteTool()],
-            llm='groq/llama-3.3-70b-versatile',
+            tools=[SerperDevTool()],
+            llm=local_llm,
         )
 
 

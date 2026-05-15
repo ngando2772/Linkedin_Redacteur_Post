@@ -1,7 +1,13 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from crewai.agents.agent_builder.base_agent import BaseAgent
+from crewai import LLM
 
+# Configuration pour Llama 3 local via Ollama
+local_llm = LLM(
+    model="ollama/mistral",
+    base_url="http://localhost:11434"
+)
 
 @CrewBase
 class Redacteurpost():
@@ -15,16 +21,14 @@ class Redacteurpost():
     def redacteur(self) -> Agent:
         return Agent(
             config=self.agents_config['redacteur'],
-            verbose=True,
-            reasoning=True,
-            max_reasoning_attempts=3,
-            llm='groq/llama-3.3-70b-versatile',
+            llm=local_llm,
+
         )
     
     @task
     def redacteur_task(self) -> Task:
         return Task(
-            config=self.agents_config['redacteur_task']
+            config=self.tasks_config['redacteur_task']
         )
 
 
@@ -38,6 +42,6 @@ class Redacteurpost():
             tasks=self.tasks, # Automatically created by the @task decorator
             process=Process.sequential,
             verbose=True,
-            memory=True
+            memory=False
             # process=Process.hierarchical, # In case you wanna use that instead https://docs.crewai.com/how-to/Hierarchical/
         )

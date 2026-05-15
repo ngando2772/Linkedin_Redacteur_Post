@@ -1,44 +1,17 @@
 seo_agent_task:
   description: >
-    Analyser la publication LinkedIn rédigée
-    par le Writer Agent afin d’optimiser
-    sa visibilité et son engagement.
+    Optimiser ce post LinkedIn :
 
-    La tâche consiste à :
-    - identifier les mots-clés principaux,
-    - améliorer la structure SEO du contenu,
-    - proposer des hashtags pertinents,
-    - optimiser les expressions importantes,
-    - vérifier la lisibilité du post,
-    - renforcer le potentiel de viralité,
-    - adapter le contenu à l’algorithme LinkedIn.
+    {write_result}
 
-    Les hashtags doivent être :
-    - pertinents,
-    - modernes,
-    - populaires,
-    - cohérents avec le sujet,
-    - adaptés à l’audience cible.
+    Ajouter SEO, mots-clés et hashtags pertinents pour améliorer la visibilité.
 
-    L’optimisation doit rester naturelle
-    et professionnelle sans surcharger le contenu.
   expected_output: >
-    Un rapport SEO LinkedIn contenant :
+    Un post LinkedIn optimisé contenant :
+    - mots-clés principaux
+    - hashtags pertinents
+    - améliorations SEO appliquées
+    - version finale prête à publier
 
-    1. Les mots-clés principaux détectés
-    2. Les améliorations SEO proposées
-    3. Une version optimisée du post
-    4. Une liste de hashtags pertinents
-    5. Les hashtags les plus stratégiques
-    6. Le score estimé de visibilité
-    7. Des recommandations d’engagement
-    8. Des suggestions pour améliorer la portée organique
-
-    Le résultat doit être :
-    - professionnel,
-    - optimisé pour LinkedIn,
-    - clair,
-    - moderne,
-    - prêt pour publication.
+    Le résultat doit être clair, professionnel et optimisé pour LinkedIn.
   agent: seo_agent
-
